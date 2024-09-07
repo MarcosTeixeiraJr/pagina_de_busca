@@ -4,7 +4,7 @@ function pesquisar() {
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
     if (!campoPesquisa) {
-        section.innerHTML = "<p>Você precisa digitar um nome válido</p>";
+        section.innerHTML = '<p class="descricao-meta">Você precisa digitar um nome válido</p>';
         return;
     }
 
@@ -12,7 +12,7 @@ function pesquisar() {
 
     let resultados = "";
     let titulo = "";
-    let descricao = ""; // Corrigir nome para evitar erro
+    let descricao = ""; 
 
     for (let dado of dados) {
         titulo = dado.titulo.toLowerCase();
@@ -22,14 +22,14 @@ function pesquisar() {
             resultados += `
                 <div class="item-resultado">
                     <h2>${dado.titulo}</h2>
-                    <p class="descrição-meta">${dado.descricao}</p>
+                    <p class="descricao-meta">${dado.descricao}</p>
                     <a href="${dado.link}" target="_blank">Mais informações</a>
                 </div>`;
         }
     }
 
     if (!resultados) {
-        resultados = "<p>Nada foi encontrado</p>";
+        resultados = '<p class="descricao-meta">Nada foi encontrado</p>';
     }
     section.innerHTML = resultados;
 }

@@ -98,7 +98,7 @@ section button:hover {
     text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
 }
 
-.descrição-meta {
+.descricao-meta {
     color: white; /* Cor do texto das descrições */
     margin: 0.5rem 0; /* Margem vertical de 0.5 rem */
 }
